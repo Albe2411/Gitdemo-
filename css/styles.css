@@ -114,7 +114,7 @@ h2 + p, h3 + p { margin-top: 1.25rem; }
 .page-introduction p:not(.eyebrow) { max-width: 42rem; margin-top: 1.5rem; }
 .service-detail { display: grid; align-items: center; gap: 2rem; scroll-margin-top: 2rem; }
 .service-detail + .service-detail { margin-top: var(--space-large); padding-top: var(--space-large); border-top: 1px solid var(--color-border); }
-.service-detail img { border-radius: var(--radius); }
+.service-detail img { aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
 .service-benefits { padding-left: 1.2rem; margin-block: 1.5rem; color: var(--color-muted); }
 .service-benefits li { padding-left: 0.35rem; margin-bottom: 0.6rem; }
 .service-benefits li::marker { color: var(--color-accent); }
@@ -195,3 +195,11 @@ h2 + p, h3 + p { margin-top: 1.25rem; }
 @media (prefers-reduced-motion: reduce) {
     .button { transition: none; }
 }
+
+/* Områdekort på kontaktsiden */
+.location-section { padding-top: 0; }
+.location-section .section-heading { align-items: flex-start; }
+.location-section .section-heading > div { max-width: 42rem; }
+.location-section .text-link { flex-shrink: 0; }
+.location-map { display: block; width: 100%; height: 420px; border: 1px solid var(--color-border); border-radius: var(--radius); }
+.map-caption { margin-top: 0.75rem; font-size: 0.8rem; }
